@@ -9,12 +9,13 @@
     {
       "autoDelete": true,
       "boot": true,
-      "deviceName": "slave1",
+      "deviceName": "slave2",
+      "diskEncryptionKey": {},
       "initializeParams": {
-        "diskSizeGb": "10",
-        "diskType": "projects/spark-371716/zones/us-west4-b/diskTypes/pd-balanced",
+        "diskSizeGb": "15",
+        "diskType": "projects/spark-371716/zones/europe-west1-b/diskTypes/pd-balanced",
         "labels": {},
-        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20221206"
+        "sourceImage": "projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20221206"
       },
       "mode": "READ_WRITE",
       "type": "PERSISTENT"
@@ -35,7 +36,7 @@
       }
     ]
   },
-  "name": "slave1",
+  "name": "slave2",
   "networkInterfaces": [
     {
       "accessConfigs": [
@@ -48,6 +49,9 @@
       "subnetwork": "projects/spark-371716/regions/europe-west1/subnetworks/default"
     }
   ],
+  "params": {
+    "resourceManagerTags": {}
+  },
   "reservationAffinity": {
     "consumeReservationType": "ANY_RESERVATION"
   },
