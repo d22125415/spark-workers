@@ -44,7 +44,7 @@ def addWorker(token, num):
     if resp.status_code==200:     
       return "Done"
     else:
-      print(resp.content)
+      print(resp)
       return "Error\n"+resp.content.decode('utf-8') + '\n\n\n'+data
 
 
